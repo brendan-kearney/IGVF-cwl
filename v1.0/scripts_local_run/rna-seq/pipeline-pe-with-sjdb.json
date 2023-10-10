@@ -8,7 +8,7 @@
   "default_adapters_file": { "class": "File", "path": "/data/reddylab/Reference_Data/Adapters/default_adapters.fasta" },
   "trimmomatic_java_opts": "-Xms1000m -Xmx1000m",
   "trimmomatic_jar_path": "/data/reddylab/software/Trimmomatic-0.32/trimmomatic-0.32.jar",
-  "enome_sizes_file": { "class": "File", "path": "/data/reddylab/Reference_Data/Genomes/hg38/GCA_000001405.15_GRCh38_no_alt_analysis_set.with_ercc92.sizes" },
+  "genome_sizes_file": { "class": "File", "path": "/data/reddylab/Reference_Data/Genomes/hg38/GCA_000001405.15_GRCh38_no_alt_analysis_set.with_ercc92.sizes" },
   "sjdbOverhang": "49",
   "annotation_file": {"class": "File", "path": "/data/reddylab/Reference_Data/IGVF/GRCh38/Gencode/v43/IGVFFI7217ZMJZ.gtf"},
   "genome_fasta_files": [
@@ -16,7 +16,7 @@
   ],
   "STARgenomeDir": {
       "class": "Directory",
-      "location": /data/reddylab/Reference_Data/IGVF/GRCh38/STAR_GRCh38_genome/
+      "location": "/data/reddylab/Reference_Data/IGVF/GRCh38/STAR_GRCh38_genome/"
   },
   "rsem_reference_files": {
       "class": "Directory",
