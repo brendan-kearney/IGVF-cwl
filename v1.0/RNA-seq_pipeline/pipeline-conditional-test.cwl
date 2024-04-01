@@ -78,6 +78,23 @@ outputs:
    output_diff_counts_read1:
      outputSource: qc/output_diff_counts_read1
      type: File[]
+   output_fastqc_report_files_read2:
+     doc: FastQC reports in zip format for paired read 2
+     type: File[]
+     outputSource: qc/output_fastqc_report_files_read2
+   output_fastqc_data_files_read2:
+     doc: FastQC data files for paired read 2
+     type: File[]
+     outputSource: qc/output_fastqc_data_files_read2
+   output_count_raw_reads_read2:
+     outputSource: qc/output_count_raw_reads_read2
+     type: File[]
+   output_custom_adapters_read2:
+     outputSource: qc/output_custom_adapters_read2
+     type: File[]
+   output_diff_counts_read2:
+     outputSource: qc/output_diff_counts_read2
+     type: File[]
 steps:
    qc:
      in:
