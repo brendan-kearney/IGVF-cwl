@@ -70,7 +70,7 @@ class ReferenceDataset(object):
             self.bowtie_genome_ref_first_index = "/data/reddylab/Reference_Data/IGVF/GRCm39/bowtie_GRCm39/IGVFFI928QLXO_GRCm39.1.ebwt"
             self.bowtie2_genome_ref_first_index = "/data/reddylab/Reference_Data/IGVF/GRCm39/bowtie2_GRCm39/IGVFFI928QLXO_GRCm39.1.bt2"
             self.star_genome_dir = "/data/reddylab/Reference_Data/IGVF/GRCm39/STAR_GRCm39_genome"
-            self.genome_sizes_file = "/data/reddylab/Reference_Data/IGVF/GRCm39/mm39.chrom.size"
+            self.genome_sizes_file = "/data/reddylab/Reference_Data/IGVF/GRCm39/mm39.chrom.sizes"
             self.encode_blacklist_bedfile = "/data/reddylab/Reference_Data/IGVF/GRCm39/exclusion_lists/mm39.excluderanges.bed"
             self.genome_effective_size = "mm"
             self.annotation_file = "/data/reddylab/Reference_Data/IGVF/GRCm39/Gencode/vM32/IGVFFI9744VSJF.gtf"
