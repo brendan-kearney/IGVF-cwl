@@ -23,15 +23,15 @@ class ReferenceDataset(object):
         self.read_length = read_length
         _genome = genome.lower()
         if _genome == 'hg38' or _genome == 'grch38':
-            self.bowtie_genome_ref_first_index = "/data/reddylab/Reference_Data/IGVF/GRCh38/bowtie_GRCh38/IGVFFI0653VCGH_GRCh38.1.ebwt"
-            self.bowtie2_genome_ref_first_index = "/data/reddylab/Reference_Data/IGVF/GRCh38/bowtie2_GRCh38/IGVFFI0653VCGH_GRCh38.1.bt2" #TODO: Add ERCC92 Bowtie2 option
-            self.star_genome_dir = "/data/reddylab/Reference_Data/IGVF/GRCh38/STAR_genome_sjdbOverhang_%d_novelSJDB" % (self.read_length-1)
+            self.bowtie_genome_ref_first_index = "/data/reddylab/Reference_Data/IGVF/GRCh38/bowtie_GRCh38%s/IGVFFI0653VCGH_GRCh38.1.ebwt"  % (".with_ercc92" if with_ercc else "")
+            self.bowtie2_genome_ref_first_index = "/data/reddylab/Reference_Data/IGVF/GRCh38/bowtie2_GRCh38%s/IGVFFI0653VCGH_GRCh38.1.bt2"  % (".with_ercc92" if with_ercc else "")
+            self.star_genome_dir = "/data/reddylab/Reference_Data/IGVF/GRCh38/STAR_genome_sjdbOverhang_%d_novelSJDB%s" % (self.read_length-1, ".with_ercc92" if with_ercc else "")
             self.encode_blacklist_bedfile = "/data/reddylab/Reference_Data/IGVF/GRCh38/hg38.blacklist.v3.bed"
             self.genome_effective_size = "hs"
-            self.annotation_file = "/data/reddylab/Reference_Data/IGVF/GRCh38/Gencode/v43/IGVFFI7217ZMJZ.gtf"
+            self.annotation_file = "/data/reddylab/Reference_Data/IGVF/GRCh38/Gencode/v43/IGVFFI7217ZMJZ%s.gtf" % (".with_ercc92" if with_ercc else "")
             self.rsem_dir = "/data/reddylab/Reference_Data/IGVF/GRCh38/RSEM_genome%s"% (".with_ercc92" if with_ercc else "")
             self.genome_sizes_file = "/data/reddylab/Reference_Data/IGVF/GRCh38/GCA_000001405.15_GRCh38_no_alt_analysis_set%s.sizes" % (".with_ercc92" if with_ercc else "")
-            self.genome_fasta_files = ["/data/reddylab/Reference_Data/IGVF/GRCh38/fasta/IGVFFI0653VCGH.fasta"]
+            self.genome_fasta_files = ["/data/reddylab/Reference_Data/IGVF/GRCh38/fasta/IGVFFI0653VCGH%s.fasta" % (".with_ercc92" if with_ercc else "")]
             self.regions_bed_file = "/data/reddylab/Reference_Data/IGVF/GRCh38/GCA_000001405.15_GRCh38_no_alt_analysis_set%s.bed" % (".with_ercc92" if with_ercc else "")
         elif _genome == 'hg19' or _genome == 'grch37':
             self.bowtie_genome_ref_first_index = "/data/reddylab/Reference_Data/Genomes/hg19/hg19.1.ebwt"
